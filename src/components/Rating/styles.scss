@@ -1,0 +1,41 @@
+.rating-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+
+  background-color: #f7f2f7;
+  padding: 15px;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 15px;
+  border-radius: 8px;
+  color: #512051;
+
+  .stars {
+    width: 116px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: 1100px) {
+    flex-direction: row;
+    width: 445px;
+    justify-content: flex-start;
+    padding: 15px 40px;
+
+    &:first-child {
+      align-self: flex-start;
+    }
+
+    &:last-child {
+      align-self: flex-end;
+    }
+
+    .stars {
+      margin-right: 35px;
+    }
+  }
+}

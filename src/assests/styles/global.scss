@@ -12,8 +12,47 @@ body,
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: League Spartan;
+  background: url('../images/bg-pattern-top-mobile.svg') left top no-repeat,
+    url('../images/bg-pattern-bottom-mobile.svg') center bottom no-repeat;
 
   .container {
     width: 327px;
+    padding: 100px 0;
+  }
+
+  @media (min-width: 1100px) {
+    background: url('../images/bg-pattern-top-desktop.svg') left top no-repeat,
+      url('../images/bg-pattern-bottom-desktop.svg') right bottom no-repeat;
+
+    .container {
+      width: 1100px;
+      display: grid;
+      grid-template-columns: repeat(2, 50%);
+      grid-template-rows: repeat(2, 1fr);
+      grid-template:
+        'text rating'
+        'testimonials testimonials';
+
+      .text-container {
+        grid-area: text;
+      }
+
+      .rating-container {
+        grid-area: rating;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .testimonials-container {
+        grid-area: testimonials;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+      }
+    }
   }
 }
