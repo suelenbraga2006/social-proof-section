@@ -3,7 +3,7 @@ import React from 'react';
 import './styles.scss';
 import star from '../../assests/images/icon-star.svg';
 
-function Rating() {
+function Rating({ phrase }) {
   return (
     <div className="rating-box">
       <div className="stars">
@@ -13,7 +13,7 @@ function Rating() {
         <img src={star} alt="rating" />
         <img src={star} alt="rating" />
       </div>
-      <p>Rated 5 Stars in Reviews</p>
+      <p>{phrase}</p>
     </div>
   );
 }

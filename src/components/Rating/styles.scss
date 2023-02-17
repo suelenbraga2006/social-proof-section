@@ -24,7 +24,8 @@
     flex-direction: row;
     width: 445px;
     justify-content: flex-start;
-    padding: 15px 40px;
+    align-items: center;
+    padding: 15px 30px;
 
     &:first-child {
       align-self: flex-start;
@@ -35,7 +36,8 @@
     }
 
     .stars {
-      margin-right: 35px;
+      margin-right: 30px;
+      margin-bottom: 0;
     }
   }
 }
